@@ -125,7 +125,7 @@ p {
 /* 
     Navbar 
 */
-nav {
+header {
     background-color: var(--clr-brown-6);
     box-shadow: var(--light-shadow);
 }
@@ -147,6 +147,67 @@ nav {
     color: var(--clr-brown-2);
     transform: rotate(90deg);
 }
+.menu-line a {
+    color: var(--clr-brown-1);
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    display: block;
+}
+.menu-line a:hover {
+    background: var(--clr-brown-3);
+    color: var(--clr-brown-5);
+    padding-left: 1.5rem;
+}
+.social-icons {
+    display: none;
+}
 .menu-line {
-    
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.show-menu {
+    height: 10rem;
+}
+@media screen and (min-width: 800px) {
+    .navbar {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .menu-line {
+        height: auto;
+        display: flex;
+    }
+    .menu-line a {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+    .menu-line a:hover {
+        padding: 0;
+        background: transparent;
+        color: var(--clr-brown-3);
+    }
+    .social-icons {
+        display: flex;
+    }
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--clr-brown-1);
+        transition: var(--transition);
+    }
+    .social-icons a:hover {
+        color: var(--clr-brown-3);
+    }
 }
